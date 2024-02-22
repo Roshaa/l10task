@@ -34,7 +34,7 @@ Route::get('/tasks/{task}/edit', function (task $task) {
 
 Route::get('/tasks', function (){
     //retorna uma view da base de dados inteira
-    return view('index', ['tasks' => Task::latest()->paginate(5)]);
+    return view('index', ['tasks' => Task::latest()->paginate(10)]);
 
     //vai mostrar tudo porque foram criadas ao mesmo tempo
     //return view('index', ['tasks' => \App\Models\Task::latest()->get()]);
